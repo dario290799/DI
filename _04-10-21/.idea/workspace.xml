@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2b69e2b5-f55b-4e11-be30-bcbd636a4abd" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../_incrementar_05-10-21/src/main/java/com/example/_incrementar_051021/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../_incrementar_05-10-21/src/main/java/com/example/_incrementar_051021/HelloApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_incrementar_05-10-21/src/main/java/com/example/_incrementar_051021/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../_incrementar_05-10-21/src/main/java/com/example/_incrementar_051021/HelloController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_incrementar_05-10-21/src/main/resources/com/example/_incrementar_051021/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../_incrementar_05-10-21/src/main/resources/com/example/_incrementar_051021/hello-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,7 +25,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="codeWithMe.voiceChat.enabledByDefault" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Acceso-a-Datos/ColdWar" />
   </component>
   <component name="RunManager">
     <configuration name="HelloApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
