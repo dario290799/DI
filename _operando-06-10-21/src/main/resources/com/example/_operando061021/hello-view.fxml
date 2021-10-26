@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="341.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example._operando061021.HelloController">
+   <children>
+      <TextField fx:id="uno" layoutX="57.0" layoutY="27.0" prefHeight="25.0" prefWidth="495.0" />
+      <TextField fx:id="dos" layoutX="57.0" layoutY="75.0" prefHeight="25.0" prefWidth="495.0" />
+      <TextField fx:id="tres" layoutX="57.0" layoutY="122.0" prefHeight="25.0" prefWidth="495.0" />
+      <RadioButton fx:id="sumar" layoutX="257.0" layoutY="161.0" mnemonicParsing="false" text="Sumar" />
+      <RadioButton fx:id="restar" layoutX="257.0" layoutY="187.0" mnemonicParsing="false" text="Restar" />
+      <RadioButton fx:id="multiplicar" layoutX="257.0" layoutY="212.0" mnemonicParsing="false" text="Multiplicar" />
+      <RadioButton fx:id="dividir" layoutX="257.0" layoutY="237.0" mnemonicParsing="false" text="Dividir" />
+      <Button fx:id="btoperar" layoutX="274.0" layoutY="278.0" mnemonicParsing="false" onAction="#operar" text="Operar" />
+   </children>
+</AnchorPane>

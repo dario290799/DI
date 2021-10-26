@@ -1,5 +1,6 @@
 package com.example._incrementar_051021;
 
+import Modelo.Operaciones;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -25,7 +26,12 @@ public class HelloController implements Initializable {
 
         resultado = Integer.parseInt(Result.getText());
 
-        Result.setText(Integer.toString(resultado+1));
+        Operaciones op = new Operaciones(resultado);
+        //si pones +"" es igual que un toString
+        Result.setText(op.incrementar()+"");
+
+
+       // Result.setText(Integer.toString(resultado+1));
 
     }
 
@@ -33,7 +39,11 @@ public class HelloController implements Initializable {
 
         resultado = Integer.parseInt(Result.getText());
 
-        Result.setText(Integer.toString(resultado-1));
+        Operaciones op = new Operaciones(resultado);
+
+        Result.setText(op.incrementar()+"");
+
+        // Result.setText(Integer.toString(resultado-1));
 
     }
 
