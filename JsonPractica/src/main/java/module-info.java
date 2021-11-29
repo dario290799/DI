@@ -1,4 +1,4 @@
-module com.example.calculadora {
+module com.example.jsonpractica {
     requires javafx.controls;
     requires javafx.fxml;
     requires javafx.web;
@@ -9,7 +9,8 @@ module com.example.calculadora {
     requires org.kordamp.ikonli.javafx;
     requires org.kordamp.bootstrapfx.core;
     requires eu.hansolo.tilesfx;
+    requires org.json;
 
-    opens com.example.calculadora to javafx.fxml;
-    exports com.example.calculadora;
+    opens com.example.jsonpractica to javafx.fxml;
+    exports com.example.jsonpractica;
 }

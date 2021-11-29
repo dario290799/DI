@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="681.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.jsonpractica.HelloController">
+   <children>
+      <Text layoutX="87.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="EQUIPOS " textAlignment="CENTER" wrappingWidth="537.9524536132812">
+         <font>
+            <Font name="Arial Black" size="36.0" />
+         </font>
+      </Text>
+      <Button fx:id="equipo1" layoutX="81.0" layoutY="112.0" mnemonicParsing="false" text="KA" />
+      <Button fx:id="equipo5" layoutX="588.0" layoutY="112.0" mnemonicParsing="false" text="MB" />
+      <Button fx:id="equipo2" layoutX="217.0" layoutY="112.0" mnemonicParsing="false" text="HK" />
+      <Button fx:id="equipo6" layoutX="81.0" layoutY="254.0" mnemonicParsing="false" text="QPR" />
+      <Button fx:id="equipo3" layoutX="356.0" layoutY="112.0" mnemonicParsing="false" text="Ba" />
+      <Button fx:id="equipo7" layoutX="217.0" layoutY="254.0" mnemonicParsing="false" text="OFI" />
+      <Button fx:id="equipo4" layoutX="481.0" layoutY="112.0" mnemonicParsing="false" text="MP" />
+      <Button fx:id="equipo8" layoutX="356.0" layoutY="254.0" mnemonicParsing="false" text="AEK" />
+      <Button fx:id="equipo9" layoutX="481.0" layoutY="254.0" mnemonicParsing="false" text="AaB" />
+      <Button fx:id="equipo10" layoutX="588.0" layoutY="254.0" mnemonicParsing="false" text="AIK" />
+   </children>
+</AnchorPane>

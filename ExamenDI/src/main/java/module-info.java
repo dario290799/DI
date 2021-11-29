@@ -1,4 +1,4 @@
-module com.example.calculadora {
+module com.example.examendi {
     requires javafx.controls;
     requires javafx.fxml;
     requires javafx.web;
@@ -10,6 +10,6 @@ module com.example.calculadora {
     requires org.kordamp.bootstrapfx.core;
     requires eu.hansolo.tilesfx;
 
-    opens com.example.calculadora to javafx.fxml;
-    exports com.example.calculadora;
+    opens com.example.examendi to javafx.fxml;
+    exports com.example.examendi;
 }
