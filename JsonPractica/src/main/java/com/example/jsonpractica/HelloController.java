@@ -4,53 +4,77 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextArea;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import org.json.JSONArray;
+import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.ResourceBundle;
 
 public class HelloController implements Initializable {
     @FXML
-    private Button equipo1,equipo2,equipo3,equipo4,equipo5,equipo6,equipo7,equipo8,equipo9,equipo10;
+    private Button perAle;
+    @FXML
+    private ImageView imagePer;
+    @FXML
+    private Label nomPer;
+    @FXML
+    private TextArea frasePer;
     @Override
+
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        lecturaJSON();
-    }
-    private void lecturaJSON() {
-
-
-        String url = "https://www.thesportsdb.com/api/v1/json/2/searchteams.php?t=";
-
-        InputStream input;
         try {
-            input = new URL(url).openStream();
-            BufferedReader bis = new BufferedReader(new InputStreamReader(input));
-            String respuesta = bis.readLine();
-            JSONObject jsonGeneral = new JSONObject(respuesta);
-            JSONArray array = jsonGeneral.getJSONArray("teams");
-
-            for (int i = 0; i < array.length(); i++) {
-                JSONObject liga = array.getJSONObject(i);
-                String equipo = liga.getString("strAlternate");
-                String escudo = liga.getString("strTeamBadge");
-                String descripcion = liga.getString("strDescriptionEN");
-                String nombreEstadio = liga.getString("Akureyrarvöllur");
-                String descripcionEstadio = liga.getString("strStadiumDescription");
-
-            }
+            realizarPeticion();
         } catch (IOException e) {
             e.printStackTrace();
+            frasePer.setText("Error de conexion");
+        }
+        try {
+            sacarElementos();
+        } catch (IOException e) {
+            e.printStackTrace();
+            frasePer.setText("No saca los elementos");
         }
 
-
     }
-    private void imprimirJson(){
+    public static JSONArray realizarPeticion() throws IOException, JSONException {
+        JSONArray array = null;
 
+        String url = "https://thesimpsonsquoteapi.glitch.me/quotes";
+        URL obj = new URL(url);
+        HttpURLConnection con = (HttpURLConnection) obj.openConnection();
+        BufferedReader in = new BufferedReader(
+                new InputStreamReader(con.getInputStream()));
+        String inputLine;
+        StringBuffer response = new StringBuffer();
+        while ((inputLine = in.readLine()) != null) {
+            response.append(inputLine);
+        }
+        in.close();
+        System.out.println(response.toString());
+        JSONObject myResponse = new JSONObject(response.toString());
+        array = myResponse.getJSONArray("quotes");
+        return array;
     }
+    public void sacarElementos() throws IOException {
+        JSONArray array = realizarPeticion();
+        for (int i = 0; i < array.length(); i++) {
+            JSONObject object = array.getJSONObject(i);
+            nomPer.setText(object.getString("quote"));
+            frasePer.setText(object.getString("character"));
+            String imagenString = object.getString("image");
+            Image img = new Image(imagenString);
+            imagePer.setImage(img);
+        }
+    }
+
 
 }
