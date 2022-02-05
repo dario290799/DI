@@ -60,8 +60,7 @@ public class HelloController implements Initializable {
         }
         in.close();
         System.out.println(response.toString());
-        JSONObject myResponse = new JSONObject(response.toString());
-        array = myResponse.getJSONArray("quotes");
+        JSONArray myResponse = new JSONArray(response.toString());
         return array;
     }
     public void sacarElementos() throws IOException {
